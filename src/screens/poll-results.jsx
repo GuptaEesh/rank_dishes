@@ -11,15 +11,7 @@ const PollResults = () => {
   return (
     <>
       <h1 className="lg text-center underline">Poll Results</h1>
-      {isRanked ? (
-        <div className="grid dish-grid m-1 g-1">
-          {dishes
-            .sort((a, b) => b.points - a.points)
-            .map((dish) => (
-              <DishCard key={dish.id} dish={dish} page="results" />
-            ))}
-        </div>
-      ) : (
+      {!isRanked && (
         <section className="flex flex-col align-center">
           <h1>
             You didn't vote any of the dishes! Please go ahead and do that
@@ -29,6 +21,14 @@ const PollResults = () => {
           </Link>
         </section>
       )}
+
+      <div className="grid dish-grid m-1 g-1">
+        {dishes
+          .sort((a, b) => b.points - a.points)
+          .map((dish) => (
+            <DishCard key={dish.id} dish={dish} page="results" />
+          ))}
+      </div>
     </>
   );
 };

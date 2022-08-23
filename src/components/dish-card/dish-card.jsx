@@ -23,7 +23,11 @@ const DishCard = ({ dish, page = null }) => {
     <article
       className={`${rank}-card flex flex-col p-2 justify-space-between dish-card`}
     >
-      {page && <h1 className="text-center underline">{rank.toUpperCase()}</h1>}
+      {page && (
+        <h1 className="text-center underline">
+          {rank.length ? "You selected :" + rank.toUpperCase() : null}
+        </h1>
+      )}
       <img loading="lazy" src={image} alt={dishName} />
       {!page && (
         <section className="flex g-1 justify-center p-1">
