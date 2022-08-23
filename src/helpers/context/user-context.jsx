@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-import { ACTIONS, getAllUsers } from "../utils";
+import { ACTIONS, getAllUsers } from "../../utils";
 
 const UserContext = createContext(null);
 const initialUserState = {
@@ -30,7 +30,7 @@ const userReducer = (usersState, action) => {
         passwordError: payload.password.length !== 0 && !isPasswordCorrect(),
       };
     default:
-      break;
+      return usersState;
   }
 };
 const UserProvider = ({ children }) => {

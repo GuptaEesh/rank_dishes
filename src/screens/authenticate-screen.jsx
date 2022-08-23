@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { InputPass, InputSimple } from "../components";
-import { useUser } from "../helpers/user-context";
+import { useUser } from "../helpers";
 import { ACTIONS } from "../utils";
 import "./screens.css";
 const AuthenticateScreen = () => {

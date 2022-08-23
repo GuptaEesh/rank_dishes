@@ -22,4 +22,5 @@ code {
   --gray-300:rgb(132, 132, 132);
   --gray-400:rgb(85, 85, 85);
   --error:red;
+  --error-light:rgb(231, 75, 75);
 }

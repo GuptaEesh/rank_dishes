@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router";
-import { useUser } from "../../helpers/user-context";
+import { useUser } from "../../helpers";
 import { App_Routes } from "../../utils";
 
 const RequireAuth = ({ token }) => {
