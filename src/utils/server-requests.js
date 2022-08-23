@@ -5,7 +5,7 @@ export const getAllUsers = async (dispatch) => {
   const response = await axios.get(url + "/users.json");
   dispatch({ type: ACTIONS.GET_ALL_USERS, payload: response.data });
 };
-export const getAllDishes = async (dispatch) => {
+export const getAllDishes = async (dispatch, setLoading) => {
   const response = await axios.get(url + "/db.json");
   dispatch({ type: ACTIONS.GET_DISHES, payload: response.data });
 };

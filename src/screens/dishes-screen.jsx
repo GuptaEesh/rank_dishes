@@ -8,9 +8,15 @@ const DishesScreen = () => {
   const {
     dishState: { dishes, searchTerm },
     dispatchDish,
+    loading,
+    setLoading,
   } = useDish();
   useEffect(() => {
+    setLoading(true);
     getAllDishes(dispatchDish);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   }, []);
   const navigate = useNavigate();
   const dishesToDisplay = /^\s*$/.test(searchTerm)
@@ -40,11 +46,20 @@ const DishesScreen = () => {
           Submit Poll
         </button>
       </section>
-      <div className="grid dish-grid m-1 g-1">
-        {dishesToDisplay.map((dish) => (
-          <DishCard dish={dish} key={dish.id} />
-        ))}
-      </div>
+      {loading ? (
+        <h1 className="lg text-center">Loading....</h1>
+      ) : dishesToDisplay.length ? (
+        <div className="grid dish-grid m-1 g-1">
+          {dishesToDisplay.map((dish) => (
+            <DishCard dish={dish} key={dish.id} />
+          ))}
+        </div>
+      ) : (
+        <h1 className="lg text-center m-1">
+          OhHo! Dishes are afraid of being judged, can you come again in some
+          time!
+        </h1>
+      )}
     </>
   );
 };

@@ -24,13 +24,20 @@ const PollResults = () => {
         </section>
       )}
 
-      <div className="grid dish-grid m-1 g-1">
-        {dishes
-          .sort((a, b) => b.points - a.points)
-          .map((dish) => (
-            <DishCard key={dish.id} dish={dish} page="results" />
-          ))}
-      </div>
+      {!dishes.length ? (
+        <h1 className="lg text-center m-1">
+          OhHo! Dishes are afraid of being judged, can you come again in some
+          time!
+        </h1>
+      ) : (
+        <div className="grid dish-grid m-1 g-1">
+          {dishes
+            .sort((a, b) => b.points - a.points)
+            .map((dish) => (
+              <DishCard key={dish.id} dish={dish} page="results" />
+            ))}
+        </div>
+      )}
     </>
   );
 };

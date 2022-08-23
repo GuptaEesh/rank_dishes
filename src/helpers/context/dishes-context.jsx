@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useState } from "react";
 import { ACTIONS } from "../../utils";
 
 const DishContext = createContext(null);
@@ -51,8 +51,11 @@ const dishReducer = (dishState, action) => {
 };
 const DishProvider = ({ children }) => {
   const [dishState, dispatchDish] = useReducer(dishReducer, initialDishState);
+  const [loading, setLoading] = useState(false);
   return (
-    <DishContext.Provider value={{ dishState, dispatchDish }}>
+    <DishContext.Provider
+      value={{ dishState, dispatchDish, loading, setLoading }}
+    >
       {children}
     </DishContext.Provider>
   );
