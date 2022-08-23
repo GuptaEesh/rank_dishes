@@ -1,0 +1,45 @@
+/*  authenticate */
+.login-form{
+    border:2px solid var(--primary-color);
+}
+
+/* Dishes Page */
+.submit-poll{
+    border: none;
+    background-color: var(--error);
+    color:var(--text-color);
+    padding: 0 30px 0 30px;
+    transition: background-color 0.3s ease;
+}
+.submit-poll:hover{
+    background-color: var(--error-light);
+}
+.search-field{
+    border-radius: 10px;
+    width: 50%;
+    padding: 1rem;
+    outline: none;
+    border: 2px solid var(--text-color);
+    background-color: var(--gray-100);
+    margin-right: 1rem;
+}
+.search-field:focus{
+    border: 2px solid var(--primary-color);
+}
+@media all and (max-width:540px) {
+    .search-submit{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top:4rem;
+    }
+    .search-field{
+        width: 80%;
+    }
+    .submit-poll{
+        padding: 10px;
+    }
+    .vote-dish{
+        margin-top:4rem;
+    }
+}
