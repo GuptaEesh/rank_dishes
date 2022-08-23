@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router";
 import "./App.css";
 import { RedirectAuth, RequireAuth } from "./components";
@@ -22,7 +21,7 @@ function App() {
       {authStatus && (
         <button
           onClick={logoutHandler}
-          className="cta-btn cursor-ptr r-05 fixed logout-btn"
+          className="cta-btn cursor-ptr r-05 absolute logout-btn"
         >
           Logout
         </button>
