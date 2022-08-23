@@ -62,6 +62,9 @@
 .absolute{
   position: absolute;
 }
+.fixed{
+  position: fixed;
+}
 .pass-toggle{
   top:12px;
   right:10px;
@@ -81,6 +84,10 @@
 .underline{
   text-decoration: underline;
 }
+.logout-btn{
+  right: 10px;
+  
+}
 
 @media all and (max-width:1300px) {
   .dish-grid{
@@ -90,6 +97,11 @@
 @media all and (max-width:900px) {
   .dish-grid{
     grid-template-columns: repeat(1,1fr);
+  }
+}
+@media all and (max-width:500px) {
+  .logout-btn{
+    margin-top:3.5rem;
   }
 }
 /* CTA button */

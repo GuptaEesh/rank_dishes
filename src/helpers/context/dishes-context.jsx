@@ -4,6 +4,7 @@ import { ACTIONS } from "../../utils";
 const DishContext = createContext(null);
 const initialDishState = {
   dishes: [],
+  searchTerm: "",
 };
 const dishReducer = (dishState, action) => {
   const { type, payload } = action;
@@ -38,6 +39,11 @@ const dishReducer = (dishState, action) => {
         dishes: dishState.dishes.map((item) =>
           item.id === payload.id ? { ...item, rank: 0, points: 0 } : item
         ),
+      };
+    case ACTIONS.SET_SEARCH_QUERY:
+      return {
+        ...dishState,
+        searchTerm: payload,
       };
     default:
       return dishState;
