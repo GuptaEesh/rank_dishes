@@ -1,0 +1,59 @@
+/* utils */
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.align-center{
+  align-items: center;
+}
+.justify-center{
+  justify-content: center;
+}
+.h-full{
+  height: 100vh;
+}
+.w-full{
+  width: 100vw;
+}
+.g-1{
+  gap: 1rem;
+}
+.g-010{
+  gap:10px;
+}
+.p-1{
+  padding: 1rem;
+}
+.p-010{
+  padding: 10px;
+}
+.cursor-ptr{
+  cursor: pointer;
+}
+.r-05{
+  border-radius: 5px;
+}
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.pass-toggle{
+  top:12px;
+  right:10px;
+}
+/* CTA button */
+.cta-btn{
+  padding: 5px 10px 5px 10px;
+  border: none;
+  background-color: var(--primary-color);
+  color:var(--text-color);
+  transition: background-color 0.14s ease-in;
+}
+.cta-btn:hover{
+  background-color:var(--gray-400);
+  /* color: var(--primary-color); */
+}

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Route, Routes } from "react-router";
 import "./App.css";
 import { RedirectAuth, RequireAuth } from "./components";
@@ -5,6 +6,9 @@ import { AuthenticateScreen, DishesScreen } from "./screens";
 import { App_Routes } from "./utils";
 
 function App() {
+  // useEffect(() => {
+  //   getAllUsers();
+  // }, []);
   return (
     <div className="App">
       <Routes>
