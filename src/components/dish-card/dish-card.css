@@ -1,5 +1,5 @@
 .dish-card{
-    height: 90%;
+    height: 80vh;
     border-radius: 10px;
     width: fit-content;
     border: 2px solid var(--gray-100);
