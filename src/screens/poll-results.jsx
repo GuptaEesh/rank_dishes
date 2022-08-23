@@ -3,6 +3,8 @@ import { DishCard } from "../components";
 import { useDish } from "../helpers";
 import { App_Routes } from "../utils";
 import { Link } from "react-router-dom";
+import "./screens.css";
+
 const PollResults = () => {
   const {
     dishState: { dishes },
@@ -12,7 +14,7 @@ const PollResults = () => {
     <>
       <h1 className="lg text-center underline">Poll Results</h1>
       {!isRanked && (
-        <section className="flex flex-col align-center">
+        <section className="flex flex-col align-center vote-dish">
           <h1>
             You didn't vote any of the dishes! Please go ahead and do that
           </h1>

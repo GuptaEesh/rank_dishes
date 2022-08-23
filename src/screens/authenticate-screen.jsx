@@ -30,50 +30,56 @@ const AuthenticateScreen = () => {
   };
 
   return (
-    <article className="h-full flex align-center justify-center">
-      <form
-        onSubmit={submitHandler}
-        className="flex flex-col g-1 justify-center login-form p-1 r-05"
-      >
-        <section>
-          <InputSimple
-            title="UserName"
-            inputName="username"
-            inputClass="p-010 r-05"
-            inputPlaceholder="username.."
-            inputType="text"
-            inputValue={username ?? ""}
-            inputFunc={inputHandler}
-          />
-          {error && usernameError ? (
-            <small className="error">Incorrect Username!</small>
-          ) : null}
-        </section>
-        <section>
-          <InputPass
-            inputName="password"
-            title="Password"
-            inputClass="p-010 r-05"
-            inputPlaceHolder="password.."
-            inputType="password"
-            inputValue={password ?? ""}
-            inputFunc={inputHandler}
-          />
-          {error && passwordError ? (
-            <small className="error">Incorrect Password!</small>
-          ) : null}
-        </section>
-        <button
-          className="cta-btn cursor-ptr r-05"
-          onClick={setExistingUserCreds}
+    <>
+      <article className="h-full flex flex-col align-center justify-center">
+        <h1 className="text-center lg">Rate the dishes</h1>
+        <small className="text-center m-1 underline">
+          Tell us what worked for you well
+        </small>
+        <form
+          onSubmit={submitHandler}
+          className="flex flex-col g-1 justify-center login-form p-1 r-05"
         >
-          Fill-in guest creds
-        </button>
-        <button className="cta-btn cursor-ptr r-05" type="submit">
-          Login
-        </button>
-      </form>
-    </article>
+          <section>
+            <InputSimple
+              title="UserName"
+              inputName="username"
+              inputClass="p-010 r-05"
+              inputPlaceholder="username.."
+              inputType="text"
+              inputValue={username ?? ""}
+              inputFunc={inputHandler}
+            />
+            {error && usernameError ? (
+              <small className="error">Incorrect Username!</small>
+            ) : null}
+          </section>
+          <section>
+            <InputPass
+              inputName="password"
+              title="Password"
+              inputClass="p-010 r-05"
+              inputPlaceHolder="password.."
+              inputType="password"
+              inputValue={password ?? ""}
+              inputFunc={inputHandler}
+            />
+            {error && passwordError ? (
+              <small className="error">Incorrect Password!</small>
+            ) : null}
+          </section>
+          <button
+            className="cta-btn cursor-ptr r-05"
+            onClick={setExistingUserCreds}
+          >
+            Fill-in guest creds
+          </button>
+          <button className="cta-btn cursor-ptr r-05" type="submit">
+            Login
+          </button>
+        </form>
+      </article>
+    </>
   );
 };
 
