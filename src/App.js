@@ -4,7 +4,7 @@ import { RedirectAuth, RequireAuth } from "./components";
 import { useUser } from "./helpers";
 import { AuthenticateScreen, DishesScreen, PollResults } from "./screens";
 import { ACTIONS, App_Routes } from "./utils";
-
+import { BsFillArrowUpCircleFill } from "./icons";
 function App() {
   const navigate = useNavigate();
   const {
@@ -15,6 +15,9 @@ function App() {
     localStorage.clear();
     dispatchUser({ type: ACTIONS.LOGOUT });
     navigate(App_Routes.authenticate);
+  };
+  const clickHandler = () => {
+    window.scroll({ top: 0, behavior: "smooth" });
   };
   return (
     <div className="App">
@@ -38,6 +41,12 @@ function App() {
           <Route path={App_Routes.results} element={<PollResults />} />
         </Route>
       </Routes>
+      {authStatus && (
+        <BsFillArrowUpCircleFill
+          onClick={clickHandler}
+          className="fixed scroll-top cursor-ptr"
+        />
+      )}
     </div>
   );
 }

@@ -88,7 +88,15 @@
   right: 10px;
   
 }
-
+.scroll-top{
+  z-index: 2;
+  bottom: 10vh;
+  right:10vh;
+  font-size: xx-large;
+  box-shadow: 0 0 0 8px var(--text-color);
+  border-radius: 50%;
+  background-color: var(--text-color);
+}
 @media all and (max-width:1300px) {
   .dish-grid{
     grid-template-columns: repeat(2,1fr);

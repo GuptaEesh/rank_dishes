@@ -3,6 +3,7 @@ export {
   BsEyeSlash,
   BsHandThumbsUp,
   BsFillHandThumbsUpFill,
+  BsFillArrowUpCircleFill,
 } from "react-icons/bs";
 export {
   AiOutlineFire,
