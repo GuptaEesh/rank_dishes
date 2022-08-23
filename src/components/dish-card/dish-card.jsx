@@ -10,7 +10,7 @@ import {
   BsHandThumbsUp,
 } from "../../icons";
 import "./dish-card.css";
-const DishCard = ({ dish }) => {
+const DishCard = ({ dish, page = null }) => {
   const { dispatchDish } = useDish();
   const { id, dishName, description, image, rank } = dish;
   const voteHandler = (rank) => {
@@ -23,42 +23,45 @@ const DishCard = ({ dish }) => {
     <article
       className={`${rank}-card flex flex-col p-2 justify-space-between dish-card`}
     >
+      {page && <h1 className="text-center underline">{rank.toUpperCase()}</h1>}
       <img loading="lazy" src={image} alt={dishName} />
-      <section className="flex g-1 justify-center p-1">
-        {rank === "first" ? (
-          <AiFillFire
-            onClick={() => removeVoteHandler("first")}
-            className="error cursor-ptr lg"
-          />
-        ) : (
-          <AiOutlineFire
-            className=" cursor-ptr lg"
-            onClick={() => voteHandler("first")}
-          />
-        )}
-        {rank === "second" ? (
-          <AiFillHeart
-            onClick={() => removeVoteHandler("second")}
-            className="error cursor-ptr lg"
-          />
-        ) : (
-          <AiOutlineHeart
-            className=" cursor-ptr lg"
-            onClick={() => voteHandler("second")}
-          />
-        )}
-        {rank === "third" ? (
-          <BsFillHandThumbsUpFill
-            onClick={() => removeVoteHandler("third")}
-            className="cursor-ptr lg"
-          />
-        ) : (
-          <BsHandThumbsUp
-            className=" cursor-ptr lg"
-            onClick={() => voteHandler("third")}
-          />
-        )}
-      </section>
+      {!page && (
+        <section className="flex g-1 justify-center p-1">
+          {rank === "first" ? (
+            <AiFillFire
+              onClick={() => removeVoteHandler("first")}
+              className="error cursor-ptr lg"
+            />
+          ) : (
+            <AiOutlineFire
+              className=" cursor-ptr lg"
+              onClick={() => voteHandler("first")}
+            />
+          )}
+          {rank === "second" ? (
+            <AiFillHeart
+              onClick={() => removeVoteHandler("second")}
+              className="error cursor-ptr lg"
+            />
+          ) : (
+            <AiOutlineHeart
+              className=" cursor-ptr lg"
+              onClick={() => voteHandler("second")}
+            />
+          )}
+          {rank === "third" ? (
+            <BsFillHandThumbsUpFill
+              onClick={() => removeVoteHandler("third")}
+              className="cursor-ptr lg"
+            />
+          ) : (
+            <BsHandThumbsUp
+              className=" cursor-ptr lg"
+              onClick={() => voteHandler("third")}
+            />
+          )}
+        </section>
+      )}
       <h1>{dishName}</h1>
       <small className="sm">{description}</small>
     </article>
