@@ -27,7 +27,7 @@ const dishReducer = (dishState, action) => {
         ...dishState,
         dishes: dishState.dishes.map((item) =>
           item.rank === payload.rank
-            ? { ...item, rank: 0, points: 0 }
+            ? { ...item, rank: "", points: 0 }
             : item.id === payload.id
             ? { ...item, rank: payload.rank, points: 40 - num * 10 }
             : item
@@ -37,7 +37,7 @@ const dishReducer = (dishState, action) => {
       return {
         ...dishState,
         dishes: dishState.dishes.map((item) =>
-          item.id === payload.id ? { ...item, rank: 0, points: 0 } : item
+          item.id === payload.id ? { ...item, rank: "", points: 0 } : item
         ),
       };
     case ACTIONS.SET_SEARCH_QUERY:
