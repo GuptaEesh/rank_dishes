@@ -45,6 +45,9 @@
   top:12px;
   right:10px;
 }
+.error{
+  color:var(--error);
+}
 /* CTA button */
 .cta-btn{
   padding: 5px 10px 5px 10px;
