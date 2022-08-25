@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+- Pre-requisites and project setup(in local): 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Step 1
 
-## Available Scripts
+> Install NodeJs(if not already installed).
 
-In the project directory, you can run:
+### Step 2
 
-### `npm start`
+> Clone dev branch of this repo to local using:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ - git clone https://github.com/GuptaEesh/rank_dishes -b dev
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Step 3
 
-### `npm test`
+> Go into the project folder
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - cd project-name
+ 
+### Step 4
 
-### `npm run build`
+> Install all the npm packages
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - npm install
+ 
+### Step 5
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> Run the application using:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ - npm start
+ 
+- The application runs on localhost:3000
 
-### `npm run eject`
+### Technologies and libraries used
+>ReactJS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+>Syook APIs
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+>useReducer hook + context API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+>React Router
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Highlights :
+- Responsiveness - This app is completely responsive and can be accessed in all kind of devices.
+- Proper messages for error/exception handling across the application
+- Use of loader to show status of tasks
