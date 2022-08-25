@@ -1,5 +1,4 @@
 .dish-card{
-    height: 80vh;
     border-radius: 10px;
     width: fit-content;
     border: 2px solid var(--gray-100);
@@ -18,10 +17,10 @@
 .third-card{
     background-color: burlywood;
 }
-@media all and (max-width:460px) {
+@media all and (max-width:600px) {
     .dish-card{
-        padding: 10px;
         height: fit-content;
+        width: 100%;
     }
 
   }

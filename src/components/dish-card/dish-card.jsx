@@ -21,7 +21,7 @@ const DishCard = ({ dish, page = null }) => {
   };
   return (
     <article
-      className={`${rank}-card flex flex-col p-2 justify-space-between dish-card`}
+      className={`${rank}-card flex flex-col p-010 justify-space-between dish-card`}
     >
       {page && (
         <h1 className="text-center underline">
