@@ -48,6 +48,11 @@ const DishesScreen = () => {
       </section>
       {loading ? (
         <h1 className="lg text-center">Loading....</h1>
+      ) : !dishes.length ? (
+        <h1 className="lg text-center m-1">
+          OhHo! Dishes are afraid of being judged, can you come again in some
+          time!
+        </h1>
       ) : dishesToDisplay.length ? (
         <div className="grid dish-grid m-1 g-1">
           {dishesToDisplay.map((dish) => (
@@ -55,10 +60,7 @@ const DishesScreen = () => {
           ))}
         </div>
       ) : (
-        <h1 className="lg text-center m-1">
-          OhHo! Dishes are afraid of being judged, can you come again in some
-          time!
-        </h1>
+        <h1 className="lg text-center">No search results found ! </h1>
       )}
     </>
   );
